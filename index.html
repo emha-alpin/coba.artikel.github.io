@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCINU Yaman - Pengurus Cabang Istimewa Nahdlatul Ulama Yaman</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Amiri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        arabic: ['"Amiri"', 'serif'],
+                    },
+                    colors: {
+                        nu: {
+                            DEFAULT: '#0F5132',
+                            light: '#15803D',
+                            dark: '#093621',
+                            soft: '#ECFDF5',
+                        },
+                        gold: {
+                            DEFAULT: '#D97706',
+                            light: '#FEF3C7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- 1. NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Nama Organisasi -->
+                <a href="#" class="flex items-center gap-3">
+                    <!-- Placeholder Logo (Ganti src dengan link file logo PCINU Yaman) -->
+                    <div class="w-11 h-11 rounded-full bg-nu flex items-center justify-center text-white font-bold text-lg shadow-sm">
+                        NU
+                    </div>
+                    <div>
+                        <span class="block font-extrabold text-nu text-lg leading-tight tracking-tight">PCINU YAMAN</span>
+                        <span class="block text-xs text-slate-500 font-medium">Bumi Seribu Wali</span>
+                    </div>
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#beranda" class="text-nu hover:text-nu-light transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-nu transition">Profil</a>
+                    <a href="#kegiatan" class="hover:text-nu transition">Berita & Kegiatan</a>
+                    <a href="#kajian" class="hover:text-nu transition">Kajian & Opini</a>
+                    <a href="#kontak" class="px-4 py-2 rounded-lg bg-nu text-white hover:bg-nu-light transition shadow-sm">Hubungi Kami</a>
+                </nav>
+
+                <!-- Tombol Menu Mobile -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+            <a href="#beranda" class="block px-3 py-2 rounded-md text-base font-semibold text-nu bg-nu-soft">Beranda</a>
+            <a href="#tentang" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Profil Organisasi</a>
+            <a href="#kegiatan" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Berita & Kegiatan</a>
+            <a href="#kajian" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Kajian & Opini</a>
+            <a href="#kontak" class="block px-3 py-2 rounded-md text-base font-semibold text-white bg-nu text-center mt-2">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="beranda" class="relative bg-nu-dark text-white overflow-hidden">
+        <!-- Background Image Overlay (Ganti URL gambar dengan foto kegiatan akbar PCINU Yaman) -->
+        <div class="absolute inset-0 opacity-25 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-nu-dark via-nu-dark/80 to-transparent"></div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-amber-300 text-xs font-semibold tracking-wider uppercase mb-4">
+                Portal Resmi Informasi & Khidmah
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+                Pengurus Cabang Istimewa Nahdlatul Ulama (PCINU) Yaman
+            </h1>
+            <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Meneguhkan tradisi keilmuan Ahlussunnah wal Jama'ah An-Nahdliyah, merawat ukhuwah santri dan mahasiswa Indonesia di Bumi Yaman.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#kegiatan" class="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm transition shadow-lg">
+                    Jelajahi Kegiatan Terbaru
+                </a>
+                <a href="#tentang" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold text-sm transition">
+                    Mengenal PCINU Yaman
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. STATISTIK & PROFIL SINGKAT -->
+    <section id="tentang" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <span class="text-nu font-bold text-sm uppercase tracking-wider">Tentang Kami</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-4">
+                        Wadah Silaturahmi & Pengembangan Keilmuan Kader NU di Yaman
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        PCINU Yaman hadir sebagai rumah besar bagi seluruh santri, pelajar, dan warga Nahdliyin yang tengah menimba ilmu di berbagai kota di Republik Yaman, mulai dari Tarim, Mukalla, Aden, hingga Sana'a.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Melalui sinergi berbagai lembaga dan badan otonom, kami berkomitmen menyelenggarakan kajian turats, Bahtsul Masail, pengabdian sosial, serta literasi digital yang bermanfaat bagi umat.
+                    </p>
+                    <a href="#struktur" class="inline-flex items-center text-nu font-bold text-sm hover:underline">
+                        Lihat Struktur Kepengurusan →
+                    </a>
+                </div>
+
+                <!-- Grid Statistik -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="p-6 rounded-2xl bg-nu-soft border border-emerald-100">
+                        <span class="block text-3xl font-extrabold text-nu mb-1">4+</span>
+                        <span class="text-sm font-semibold text-slate-700">Wilayah Koordinator</span>
+                        <span class="block text-xs text-slate-500 mt-1">Tarim, Mukalla, Aden, dll.</span>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <span class="block text-3xl font-extrabold text-slate-900 mb-1">8+</span>
+                        <span class="text-sm font-semibold text-slate-700">Lembaga & Banom</span>
+                        <span class="block text-xs text-slate-500 mt-1">LBM, Lakpesdam, Fatayat, dll.</span>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <span class="block text-3xl font-extrabold text-slate-900 mb-1">50+</span>
+                        <span class="text-sm font-semibold text-slate-700">Agenda Tahunan</span>
+                        <span class="block text-xs text-slate-500 mt-1">Kajian, Seminar & Sosial</span>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-gold-light/60 border border-amber-200">
+                        <span class="block text-3xl font-extrabold text-gold mb-1">100%</span>
+                        <span class="text-sm font-semibold text-slate-700">Khidmah Umat</span>
+                        <span class="block text-xs text-slate-500 mt-1">Aswaja An-Nahdliyah</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BERITA & KEGIATAN TERKINI -->
+    <section id="kegiatan" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-nu font-bold text-sm uppercase tracking-wider">Kabar Cabang</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Berita & Kegiatan Terbaru</h2>
+                </div>
+                <a href="#" class="text-sm font-bold text-nu hover:text-nu-light">Lihat Semua Arsip →</a>
+            </div>
+
+            <!-- Grid Kartu Berita -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Kartu 1 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col">
+                    <div class="h-48 bg-slate-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Kegiatan Bahtsul Masail" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center gap-2 text-xs font-semibold mb-3">
+                            <span class="px-2.5 py-1 rounded-md bg-nu-soft text-nu">Bahtsul Masail</span>
+                            <span class="text-slate-400">15 November 2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug hover:text-nu transition">
+                            <a href="#">LBM PCINU Yaman Gelar Bahtsul Masail Bahas Fiqih Transaksi Digital</a>
+                        </h3>
+                        <p class="text-sm text-slate-600 line-clamp-3 mb-4 flex-1">
+                            Puluhan delegasi santri dari berbagai ribath di Tarim turut hadir merumuskan jawaban hukum Islam terkait perkembangan teknologi finansial modern.
+                        </p>
+                        <a href="#" class="text-sm font-bold text-nu hover:underline">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <!-- Kartu 2 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col">
+                    <div class="h-48 bg-slate-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80" alt="Seminar Keilmuan" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center gap-2 text-xs font-semibold mb-3">
+                            <span class="px-2.5 py-1 rounded-md bg-amber-50 text-gold">Kabar Cabang</span>
+                            <span class="text-slate-400">02 November 2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug hover:text-nu transition">
+                            <a href="#">Peringatan Hari Santri Nasional: Meneguhkan Peran Santri Diaspora</a>
+                        </h3>
+                        <p class="text-sm text-slate-600 line-clamp-3 mb-4 flex-1">
+                            Rangkaian acara Hari Santri berlangsung khidmat dengan pembacaan shalawat, diskusi kebangsaan, serta pameran karya tulis kader PCINU Yaman.
+                        </p>
+                        <a href="#" class="text-sm font-bold text-nu hover:underline">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <!-- Kartu 3 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col">
+                    <div class="h-48 bg-slate-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Pelatihan Media" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center gap-2 text-xs font-semibold mb-3">
+                            <span class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700">Lakpesdam</span>
+                            <span class="text-slate-400">20 Oktober 2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug hover:text-nu transition">
+                            <a href="#">Workshop Literasi Digital & Penulisan Ilmiah untuk Pelajar Baru</a>
+                        </h3>
+                        <p class="text-sm text-slate-600 line-clamp-3 mb-4 flex-1">
+                            Membekali mahasiswa dan santri baru dengan kemampuan riset kitab klasik berbasis digital serta teknik penulisan artikel populer.
+                        </p>
+                        <a href="#" class="text-sm font-bold text-nu hover:underline">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. RUBRIK KAJIAN & TULISAN KADER -->
+    <section id="kajian" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <span class="text-gold font-bold text-sm uppercase tracking-wider">Khazanah Keilmuan</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Kajian & Tulisan Kader</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Item Kajian 1 -->
+                <div class="p-6 rounded-2xl border border-slate-200 hover:border-nu transition bg-slate-50/50">
+                    <span class="text-xs font-bold text-nu uppercase">Kajian Turats</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">
+                        <a href="#" class="hover:text-nu">Metodologi Sanad Keilmuan Ulama Hadhramaut dan Nusantara</a>
+                    </h3>
+                    <p class="text-sm text-slate-600 mb-4">Menelusuri mata rantai transmisi keilmuan antara ulama Tarim dan pesantren-pesantren di Indonesia sejak abad ke-18.</p>
+                    <div class="text-xs text-slate-500 font-medium">Oleh: Tim Kajian LBM PCINU Yaman</div>
+                </div>
+
+                <!-- Item Kajian 2 -->
+                <div class="p-6 rounded-2xl border border-slate-200 hover:border-nu transition bg-slate-50/50">
+                    <span class="text-xs font-bold text-gold uppercase">Opini & Refleksi</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">
+                        <a href="#" class="hover:text-nu">Merawat Tradisi Muthola'ah di Tengah Arus Informasi Cepat</a>
+                    </h3>
+                    <p class="text-sm text-slate-600 mb-4">Catatan reflektif tentang pentingnya ketekunan membaca kitab secara utuh bagi penuntut ilmu di era serba instan.</p>
+                    <div class="text-xs text-slate-500 font-medium">Oleh: Redaksi Media PCINU Yaman</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER -->
+    <footer id="kontak" class="bg-slate-900 text-slate-300 pt-16 pb-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-800">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-nu flex items-center justify-center text-white font-bold">NU</div>
+                        <span class="font-extrabold text-white text-lg">PCINU YAMAN</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Pengurus Cabang Istimewa Nahdlatul Ulama Republik Yaman. Berkhidmah untuk umat, menjaga tradisi keilmuan Aswaja An-Nahdliyah.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#tentang" class="hover:text-white transition">Profil & Sejarah</a></li>
+                        <li><a href="#kegiatan" class="hover:text-white transition">Agenda Kegiatan</a></li>
+                        <li><a href="#kajian" class="hover:text-white transition">Buletin & Kajian</a></li>
+                        <li><a href="#" class="hover:text-white transition">Arsip Dokumen (Google Drive)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Sekretariat & Media Sosial</h4>
+                    <p class="text-sm text-slate-400 mb-3">Tarim, Hadhramaut, Republik Yaman</p>
+                    <p class="text-sm text-slate-400 mb-4">Email: redaksi@pcinuyaman.org (contoh)</p>
+                    <div class="flex space-x-4 text-sm font-semibold">
+                        <a href="#" class="text-emerald-400 hover:text-emerald-300">Instagram</a>
+                        <a href="#" class="text-emerald-400 hover:text-emerald-300">YouTube</a>
+                        <a href="#" class="text-emerald-400 hover:text-emerald-300">Facebook</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-slate-500">
+                © 2026 PCINU Yaman. Hak Cipta Dilindungi Undang-Undang.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Sederhana untuk Menu Mobile -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
